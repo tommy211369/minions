@@ -13,7 +13,7 @@ function App(props) {
   console.log("minions : ", props.minions);
   console.log("message : ", props.message);
 
-  if (props.history && props.history != "") {
+  if (props.history && props.history !== "") {
     history = props.history.map((result) => (
       <div key={result.id} className={classes.result}>
         <span>
@@ -43,7 +43,7 @@ function App(props) {
 
         <Commander />
 
-        {props.history && props.history != "" ? (
+        {props.history && props.history !== "" ? (
           <div className={classes.content}>
             <h2>Tableau des infiltrations</h2>
             {history}
