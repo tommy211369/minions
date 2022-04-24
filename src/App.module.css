@@ -24,6 +24,15 @@
   font-weight: bold;
 }
 
+.App .message {
+  background: rgba(251, 233, 64, 0.75);
+  font-size: 1.4em;
+  width: max-content;
+  margin: 30px auto;
+  padding: 10px;
+  border-radius: 10px;
+}
+
 .App .result {
   display: flex;
   justify-content: space-between;

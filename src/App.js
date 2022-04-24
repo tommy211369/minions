@@ -10,6 +10,8 @@ import { connect } from "react-redux";
 
 function App(props) {
   let history;
+  console.log("minions : ", props.minions);
+  console.log("message : ", props.message);
 
   if (props.history && props.history != "") {
     history = props.history.map((result) => (
@@ -35,6 +37,10 @@ function App(props) {
           </div>
         </div>
 
+        {props.message ? (
+          <p className={classes.message}>{props.message}</p>
+        ) : null}
+
         <Commander />
 
         {props.history && props.history != "" ? (
@@ -52,6 +58,7 @@ function App(props) {
 const mapStatetoProps = (state) => {
   return {
     minions: state.minion.minions,
+    message: state.minion.message,
     history: state.save.history,
   };
 };
